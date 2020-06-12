@@ -176,6 +176,8 @@ namespace TestWebFast
         {
             if (!IsTestRunInProgress())
             {
+                Logger.WritePostponedInfo($"test {testName} is running");
+
                 new Thread(() =>
                 {
                     Thread.CurrentThread.IsBackground = false;
