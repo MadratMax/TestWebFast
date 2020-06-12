@@ -13,6 +13,7 @@ namespace TestWebFast
     internal class TestManager : ITestManager
     {
         private IActionProvider actionProvider;
+        private Validator validator;
         private List<FileInfo> testFiles;
         private List<FileInfo> pageFiles;
         private List<string> testNames;
@@ -35,6 +36,8 @@ namespace TestWebFast
 
             InitializePages();
             InitializeTests();
+
+            this.validator = new Validator(this);
         }
 
         public Dictionary<string, List<string>> GetAllTestCases()
@@ -190,17 +193,16 @@ namespace TestWebFast
         {
             WaitForTestRunfinish();
 
-            testRunCounter++;
-            testExecutionCount[testName]++;
-            SetTestRunning(testName, true);
-            
-            actionProvider.ExecuteActions(testName, testResults);
-
-            Logger.WritePostponedInfo($"Test {testName} {GetTestStringResult(testName)}");
-
-            SetTestRunning(testName, false);
-
-            Menu.RestartMenu(this);
+            if (validator.IsTestValid(testName))
+            {
+                testRunCounter++;
+                testExecutionCount[testName]++;
+                SetTestRunning(testName, true);
+                actionProvider.ExecuteActions(testName, testResults);
+                Logger.WritePostponedInfo($"Test {testName} {GetTestStringResult(testName)}");
+                SetTestRunning(testName, false);
+                Menu.RestartMenu(this);
+            }
         }
 
         private void InitializeTests()
