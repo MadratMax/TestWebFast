@@ -27,40 +27,40 @@ namespace TestWebFast
         {
             //if (!LoggerHub.PostponedErrors.Contains(error))
             {
-                error = $" error: {error}";
+                error = $" [ERROR] {error}";
                 LoggerHub.PostponedErrors.Add(error);
             }
         }
 
         public static void AddNotification(string note)
         {
-            note = $" note: {note}";
+            note = $" [INFO] {note}";
             LoggerHub.Notification = note;
             
         }
 
         public static void WriteRealTimeInfo(string info)
         {
-            Console.WriteLine($" ==============================================================================================");
+            Console.WriteLine($" ___________________________________________________________________________________________________");
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine($" [INFO] {info}");
             Console.ResetColor();
-            Console.WriteLine($" ==============================================================================================");
+            Console.WriteLine($" ___________________________________________________________________________________________________");
             Console.WriteLine($" press any key");
-            Console.WriteLine($" ==============================================================================================");
+            Console.WriteLine($" ___________________________________________________________________________________________________");
             Thread.Sleep(2500);
         }
 
         public static void WriteRealTimeError(string error)
         {
             Console.Clear();
-            Console.WriteLine($" ==============================================================================================");
+            Console.WriteLine($" ___________________________________________________________________________________________________");
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine($" [ERROR] {error}");
             Console.ResetColor();
-            Console.WriteLine($" ==============================================================================================");
+            Console.WriteLine($" ___________________________________________________________________________________________________");
             Console.WriteLine($" press any key");
-            Console.WriteLine($" ==============================================================================================");
+            Console.WriteLine($" ___________________________________________________________________________________________________");
             Thread.Sleep(2500);
         }
 
