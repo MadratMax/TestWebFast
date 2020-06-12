@@ -81,10 +81,10 @@ namespace TestWebFast
                 }
             }
 
-            LoggerHub.AddNotificationToHub($"Test: {testName}. Invalid step: {step}");
+            LoggerHub.AddNotificationToHub($"Test {testName}. Invalid step: {step}");
             if (command == Commands.TextInput)
             {
-                LoggerHub.AddNotificationToHub($"Test: {testName}. Invalid step: {step}. Input text is not defined. please use <> to specify a text");
+                LoggerHub.AddNotificationToHub($"Test {testName}. Invalid step: {step}. Input text is not defined. please use <> to specify a text");
             }
 
             return null;

@@ -61,7 +61,7 @@ namespace TestWebFast
             Console.WriteLine($" ___________________________________________________________________________________________________");
             Console.WriteLine($" press any key");
             Console.WriteLine($" ___________________________________________________________________________________________________");
-            Thread.Sleep(2500);
+            Console.ReadKey();
         }
 
         public static void ClearHub()

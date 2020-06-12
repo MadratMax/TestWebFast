@@ -201,7 +201,7 @@ namespace TestWebFast.ActionController
                                 }
                                 else
                                 {
-                                    LoggerHub.AddNotificationToHub($"Test: {testName}. Step: {step.StepName}. Input text is not defined. Please use <> to specify a text");
+                                    LoggerHub.AddNotificationToHub($"Test {testName}. Step: {step.StepName}. Input text is not defined. Please use <> to specify a text");
                                 }
 
                                 testResults.AddError(testName,

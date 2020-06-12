@@ -2,6 +2,7 @@
 using System.Threading;
 using TestWebFast.ActionController;
 using TestWebFast.CommandCenter;
+using TestWebFast.Handlers;
 using TestWebFast.TestCenter;
 using TestWebFast.UI;
 
@@ -16,10 +17,22 @@ namespace TestWebFast
 
         public static void InitializeApp()
         {
+            CheckData();
             protocol = new Protocol();
             commandManager = new CommandManager(protocol);
             actionProvider = new ActionProvider(commandManager);
             testManager = new TestManager(actionProvider);
+        }
+
+        private static void CheckData()
+        {
+            var errors = new Verificator().CheckDataLocation().GetErrors;
+
+            if (errors.Count > 0)
+            {
+                Logger.WriteRealTimeError(String.Join("\n ", errors));
+                Exit();
+            }
         }
 
         public static void RunApplication(bool command)

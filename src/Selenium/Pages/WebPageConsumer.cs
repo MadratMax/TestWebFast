@@ -33,7 +33,10 @@ namespace TestWebFast
 
         private static IPage GetCurrentPage()
         {
-            return currentPage?? Pages.GetPages().Last();
+            if(Pages.GetPages().FirstOrDefault() == null)
+                Logger.WriteRealTimeError($"No pages found. Check page objects dir: {Settings.PageObjectsPath}");
+
+            return currentPage?? Pages.GetPages()?.FirstOrDefault();
         }
     }
 }
