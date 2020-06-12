@@ -18,12 +18,12 @@ namespace TestWebFast
             Console.Clear();
 
             Console.WriteLine($" ");
-            Console.WriteLine($"  'A' - run all tests | 'I' - view test steps | 'Space' - mark test | 'R' - restart | 'Esc' - quit\n" +
-                              $" ===================================================================================================\n" +
+            Console.WriteLine($" 'A' - run all tests | 'I' - view test steps | 'Space' - mark test | 'R' - restart | 'Esc' - quit\n" +
+                              $" ___________________________________________________________________________________________________\n" +
                               $" {info}\n" +
-                              $" ===================================================================================================\n" +
+                              $" ___________________________________________________________________________________________________\n" +
                               $" {error}\n" +
-                              $" ===================================================================================================\n");
+                              $" ___________________________________________________________________________________________________\n");
             System.Console.WriteLine("");
         }
 
@@ -114,22 +114,22 @@ namespace TestWebFast
 
         public static void ShowBottomBar()
         {
-            Console.WriteLine($"\n\n ===================================================================================================");
+            Console.WriteLine($"\n\n ___________________________________________________________________________________________________");
             var notifications = LoggerHub.GetNotifications().Select(i => i.ToString()).ToArray();
             Console.ForegroundColor = ConsoleColor.DarkRed;
             Console.WriteLine($" {String.Join("\n ", notifications)}");
             Console.ResetColor();
-            Console.WriteLine($" ===================================================================================================\n\n");
+            Console.WriteLine($" ___________________________________________________________________________________________________\n\n");
         }
 
         public static void ShowSteps(string testName, List<string> steps)
         {
             Console.Clear();
-            Console.WriteLine($" ===================================================================================================");
+            Console.WriteLine($" ___________________________________________________________________________________________________");
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine($" {testName}");
             Console.ResetColor();
-            Console.WriteLine($" ===================================================================================================\n");
+            Console.WriteLine($" ___________________________________________________________________________________________________\n");
 
             int index = 1;
 
@@ -140,12 +140,12 @@ namespace TestWebFast
                 Console.ResetColor();
             }
 
-            Console.WriteLine($" ===================================================================================================");
+            Console.WriteLine($" ___________________________________________________________________________________________________");
             if (!string.IsNullOrEmpty(LoggerHub.GetError(testName)))
             {
                 Console.WriteLine($"\n Error:");
                 Console.WriteLine($" {LoggerHub.TestErrors[testName]}");
-                Console.WriteLine($" ===================================================================================================");
+                Console.WriteLine($" ___________________________________________________________________________________________________");
             }
             
             Console.WriteLine(" \n\n\n press any key");
@@ -156,9 +156,9 @@ namespace TestWebFast
         public static ConsoleKey ShowConfirmToTo(string cause)
         {
             Console.Clear();
-            Console.WriteLine($"\n ===================================================================================================");
+            Console.WriteLine($"\n ___________________________________________________________________________________________________");
             Console.WriteLine($" press 'Enter' to {cause}");
-            Console.WriteLine($" ===================================================================================================");
+            Console.WriteLine($" ___________________________________________________________________________________________________");
             var key = Console.ReadKey(true).Key;
             return key;
         }
@@ -166,9 +166,9 @@ namespace TestWebFast
         public static void ShowInstantFullScreenMessage(string message)
         {
             Console.Clear();
-            Console.WriteLine($"\n ===================================================================================================");
+            Console.WriteLine($"\n ___________________________________________________________________________________________________");
             Console.WriteLine($" {message}");
-            Console.WriteLine($" ===================================================================================================");
+            Console.WriteLine($" ___________________________________________________________________________________________________");
             Console.ReadKey();
         }
 
