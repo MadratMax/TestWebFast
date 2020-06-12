@@ -1,0 +1,53 @@
+﻿{
+  "BrowserSessionSettings": {    
+    "Mode":  "local" 
+  },
+
+  "LocalBrowserSettings": {
+    "Browser": "chrome"
+  },
+
+  "RemoteBrowserSettings": {
+    "ChromeCapabilities": "ChromeCapabilities",
+    "FirefoxCapabilities": "FirefoxCapabilities",
+    "OperaCapabilities": "OperaCapabilities",
+    "EdgeCapabilities": "EdgeCapabilities",
+    "Endpoint": "http://devtfsbuilddocker-va-20.devintermedia.net:4444/wd/hub/"
+  },
+
+  "ChromeCapabilities": {
+    "browserName": "chrome",
+    "version": "76.0",
+    "platform": "any",
+    "enableVNC": true,
+    "goog:chromeOptions": {
+      "args": [ "window-size=1920,1080", "window-position=0,0" ]
+    }
+  },
+
+  "FirefoxCapabilities": {
+    "browserName": "firefox",
+    "version": "74.0",
+    "platform": "any",
+    "enableVNC": true,
+    "moz:firefoxOptions": {
+      "args": [ "-width", "1920", "-height", "1080" ]
+    }
+  },
+
+  "OperaCapabilities": {
+    "browserName": "operablink",
+    "version": "60.0",
+    "platform": "any",
+    "enableVNC": true,
+    "operaOptions": {
+      "args": [ "window-size=1920,1080", "window-position=0,0" ],
+      "binary": "/usr/bin/opera"
+    }
+  },
+
+  "EdgeCapabilities": {
+    "browserName": "MicrosoftEdge",
+    "platform": "windows"
+  }
+}

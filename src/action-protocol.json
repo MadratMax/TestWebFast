@@ -1,0 +1,76 @@
+{
+  "actions": {
+    "open-browser": {
+      "1": "open browser",
+      "2": "start browser",
+      "3": "launch browser",
+      "4": "run browser"
+    },
+    "open-page": {
+      "1": "open page",
+      "2": "go to",
+      "3": "move to"
+    },
+    "page-title": {
+      "1": "page title",
+      "2": "title"
+    },
+    "close": {
+      "1": "close browser",
+      "2": "exit",
+      "3": "quit"
+    },
+    "element-click": {
+      "1": "click"
+    },
+    "element-text": {
+      "1": "text is",
+      "2": "text is shown",
+      "3": "text presented"
+    },
+    "enter-text": {
+      "1": "enter text",
+      "2": "write text",
+      "3": "input text",
+      "4": "enters text"
+    },
+    "visibility": {
+      "1": "visible",
+      "2": "showed",
+      "3": "displayed",
+      "4": "presented",
+      "5": "exist",
+      "6": "exists"
+    },
+    "switch-frame": {
+      "1": "switch to frame",
+      "2": "switch frame",
+      "3": "frame switch"
+    },
+    "open-tab": {
+      "1": "switch to tab",
+      "2": "switch tab",
+      "3": "move tab",
+      "4": "go tab",
+      "5": "go to tab",
+      "6": "select tab",
+      "7": "open tab"
+    },
+    "create-tab": {
+      "1": "create a tab",
+      "2": "new tab",
+      "3": "create tab"
+    },
+    "close-tab": {
+      "1": "close a tab",
+      "2": "close tab"
+    },
+    "wait": {
+      "1": "wait",
+      "2": "delay"
+    },
+    "stop": {
+      "1": "stop"
+    }
+  }
+}
