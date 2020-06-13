@@ -4,6 +4,3 @@ element:LoginButton:xpath://*[@id="gb_70"]
 element:FindButton:xpath://*[@id="tsf"]/div[2]/div[1]/div[3]/center/input[1]
 element:Images:xpath://*[@id="hdtb-msb-vis"]/div[2]/a
 element:MapButton:xpath://*[@id="i6"]/div[1]/span/span/div[1]/a/span
-element:LoginTextBox:xpath://*[@id="identifierId"]
-element:NextButton:xpath://*[@id="identifierNext"]/span/span
-element:AccountNotFoundMessage:xpath://*[@id="headingText"]/span
