@@ -25,9 +25,9 @@ namespace TestWebFast
             {
                 if (command == Commands.Click || command == Commands.ElementText || command == Commands.Visible)
                 {
-                    if (WebPageConsumer.CurrentPage.Elements.IsElementExist(entry))
+                    if (WebPageConsumer.FindElementFromAllPages(entry) != null)
                     {
-                        return WebPageConsumer.CurrentPage.Elements.GetElement(entry);
+                        return WebPageConsumer.FindElementFromAllPages(entry).Elements.GetElement(entry);
                     }
                 }
                 if (command == Commands.CloseTab || command == Commands.OpenTab)

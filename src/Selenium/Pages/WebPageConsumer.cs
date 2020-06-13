@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using OpenQA.Selenium;
+using TestWebFast.Selenium.Pages;
 
 namespace TestWebFast
 {
@@ -20,6 +21,11 @@ namespace TestWebFast
         public static IWebElement CurrentElement { get; set; }
 
         public static bool InFrame { get; set; }
+
+        public static IPage FindElementFromAllPages(string element)
+        {
+            return Pages.GetPages().FirstOrDefault(n => n.Elements.IsElementExist(element));
+        }
 
         public static IPage GetPage(string pageName)
         {
