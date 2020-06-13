@@ -1,0 +1,9 @@
+open browser chrome
+open page GoogleMain
+element SearchBar is displayed
+click LoginButton
+element LoginTextBox is displayed
+click LoginTextBox
+enter text <xxx@xxx.com>
+click NextButton
+AccountNotFoundMessage element is displayed

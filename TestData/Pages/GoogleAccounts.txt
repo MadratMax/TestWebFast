@@ -1,0 +1,3 @@
+element:LoginTextBox:xpath://*[@id="identifierId"]
+element:NextButton:xpath://*[@id="identifierNext"]/span/span
+element:AccountNotFoundMessage:xpath://*[@id="headingText"]/span
